@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="DESCRIPTION">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="HOI, ML, CV, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Haodong Yan, Hang Yu, Zhide Zhong, Weilin Yuan, Xin Gong, Zehang Luo, Chengxi Heyu, Junfeng Li, Wenxuan Song, Shunbo Zhou, Haoang Li">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="The Hong Kong University of Science and Technology (Guangzhou), Huawei Cloud">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="DESCRIPTION">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://hgzn258.github.io/SCAR/">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+  <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Haodong Yan, Hang Yu, Zhide Zhong, Weilin Yuan, Xin Gong, Zehang Luo, Chengxi Heyu, Junfeng Li, Wenxuan Song, Shunbo Zhou, Haoang Li">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="HOI">
+  <meta property="article:tag" content="VLA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="DESCRIPTION">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation">
+  <meta name="citation_author" content="Haodong Yan, Hang Yu, Zhide Zhong, Weilin Yuan, Xin Gong, Zehang Luo, Chengxi Heyu, Junfeng Li, Wenxuan Song, Shunbo Zhou, Haoang Li">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://arxiv.org/abs/2512.01677">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/SCAR.ico">
+  <link rel="apple-touch-icon" href="static/images/SCAR.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation",
+    "description": "DESCRIPTION",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Haodong Yan",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hang Yu",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      }
+      {
+        "@type": "Person",
+        "name": "Zhide Zhong",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Weilin Yuan",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      },
+            {
+        "@type": "Person",
+        "name": "Xin Gong",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zehang Luo",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      }
+      {
+        "@type": "Person",
+        "name": "Chengxi Heyu",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Junfeng Li",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      }
+            {
+        "@type": "Person",
+        "name": "Wenxuan Song",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      }
+      {
+        "@type": "Person",
+        "name": "Shunbo Zhou",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Huawei Cloud"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Haoang Li",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+        }
+      }
+    ],
+    "datePublished": "2025",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://hgzn258.github.io/SCAR/",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["HOI", "VLA", "ML", "CV", "AI"],
+    "abstract": "DESCRIPTION",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://hgzn258.github.io/SCAR/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/SCAR.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-2 publication-title">Open-world Hand-Object Interaction Video Generation Based on Structure and Contact-aware Representation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a target="_blank">Haodong Yan</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a target="_blank">Hang Yu</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a target="_blank">Zhide Zhong</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a target="_blank">Weilin Yuan</a><sup>1</sup>,</span>
+                      <span class="author-block">
+                        <a target="_blank">Xin Gong</a><sup>1</sup>,</span>
+                        <span class="author-block">
+                          <a target="_blank">Zehang Luo</a><sup>1</sup>,</span>
+                          <span class="author-block">
+                            <a target="_blank">Chengxi Heyu</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                              <a target="_blank">Junfeng Li</a><sup>1</sup>,</span>
+                              <span class="author-block">
+                                <a target="_blank">Wenxuan Song</a><sup>1</sup>,</span>
+                                <span class="author-block">
+                                  <a target="_blank">Shunbo Zhou</a><sup>2</sup>,</span>
+                                    <span class="author-block">
+                                      <a target="_blank">Haoang Li</a><sup>1</sup>,</span>
+                                    </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block"><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou),</span>
+                    <span class="author-block"><sup>2</sup>Huawei Cloud</span>
+                  </div>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2512.01677" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/paper.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Additional text section -->
+<section class="section hero is-light">
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            We propose a structure and contact-aware representation acts as an additional interaction-oriented generative supervision signal. By learning to jointly generate videos and our representation at a large scale, our model captures interaction patterns consistent with physical constraints, enabling strong generalization to complex open-world interactions, even with unseen non-rigid objects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End additional text section -->
+
+<!-- Paper abstract -->
+<section class="section hero is-white">
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            Generating realistic hand-object interactions (HOI) videos is a significant challenge due to the difficulty of modeling physical constraints (e.g., contact and occlusion between hands and manipulated objects). Current methods utilize HOI representation as an auxiliary generative objective to guide video synthesis. However, there is a dilemma between 2D and 3D representations that cannot simultaneously guarantee scalability and interaction fidelity. To address this limitation, we propose a structure and contact-aware representation that captures hand-object contact, hand-object occlusion, and holistic structure context without 3D annotations. This interaction-oriented and scalable supervision signal enables the model to learn fine-grained interaction physics and generalize to open-world scenarios. To fully exploit the proposed representation, we introduce a joint-generation paradigm with a share-and-specialization strategy that generates interaction-oriented representations and videos. Extensive experiments demonstrate that our method outperforms state-of-the-art methods on two real-world datasets in generating physics-realistic and temporally coherent HOI videos. Furthermore, our approach exhibits strong generalization to challenging open-world scenarios, highlighting the benefit of our scalable design.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Key Contributions -->
+<section class="section hero is-light">
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <ul>
+            <li>We propose a structure and contact-aware representation as a scalable and interaction-oriented supervisory signal that guides the model to capture fine-grained interaction physics. We curate this representation for over 100k HOI videos, facilitating large-scale training.</li>
+            <li>We introduce a joint-generation paradigm with a share-and-specialization strategy that generates proposed HOI representations and videos simultaneously, mitigating multi-stage error accumulation.</li>
+            <li>Extensive experiments demonstrate our method generates physics-realistic HOI videos, surpassing state-of-the-art methods on two real-world datasets and showing strong generalization to open-world scenarios.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Key Contributions -->
+
+<!-- Our HOI Representation -->
+<section class="section hero is-white">
+  <div class="container is-fullhd">
+    <h2 class="title is-3 has-text-centered">Our HOI Representation</h2>
+    <!-- Image 1 -->
+    <figure class="image">
+      <img src="static/images/Presentation.png" alt="Generated hand-object interaction sequences" loading="lazy">
+      <figcaption class="has-text-centered mt-2">
+        Overview of our structure and contact-aware representation curation pipeline. It begins with (a) Segmentation Extraction, where a CoT-guided VLM grounds hand and object from the input RGB video, and SAM2 generates HOI masks. Next, (b) Contact Region Estimation produces the final contact-augmented hand-object contours by computing a contact region from the intersection of the dilated hand and object contours. In parallel, (c) Video Depth Estimation generates a dense depth map sequence for holistic structure. Finally, these contact-augmented hand-object contours are alpha-blended onto the depth maps to form the final HOI representation.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+<!-- Our HOI Representation -->
+
+
+<!-- Joint Generation of Video and Representation
+ -->
+<section class="section hero is-light">
+  <div class="container is-fullhd">
+    <h2 class="title is-3 has-text-centered">Joint Generation of Video and Representation</h2>
+    <!-- Image 2 -->
+    <figure class="image">
+      <img src="static/images/pipeline.png" alt="Pipeline diagram of our JointHOI model" loading="lazy">
+      <figcaption class="has-text-centered mt-2">
+        The joint-generation paradigm of our method. Given an observed image and a task description, our framework jointly generates a video and its corresponding HOI representation. The core technical novelty lies in the Hierarchical Joint Denoiser that co-denoises visual and interaction tokens within a unified latent space. First, the Shared Semantics module enforces cross-modal consistency via an alignment loss (maximizing cosine similarity) to capture shared semantics like spatial layout and temporal dynamics. Then, the Specialized Details module adds a learnable interaction embedding to capture modality-specific details. Finally, the denoised predicted visual and interaction tokens are passed through the VAE decoder to reconstruct both outputs.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+<!-- End Joint Generation of Video and Representation -->
+
+
+<!-- Experimental Results -->
+<section class="section hero is-white">
+  <div class="container is-fullhd">
+    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+    <!-- Image 3 -->
+    <figure class="image">
+      <img src="static/images/table1.png" loading="lazy">
+    </figure>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/1-1.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Use the knife to cut the plate.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 and 5 - Centered -->
+        <div class="column is-12">
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/video1_4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>C</sub>(our)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/video1_5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/2-1.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Use the eraser to brush the bowl.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 and 5 - Centered -->
+        <div class="column is-12">
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/2-4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>C</sub>(our)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/2-5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/3-1.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Put out something from the bowl using the spatula.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 and 5 - Centered -->
+        <div class="column is-12">
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/3-4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>C</sub>(our)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/3-5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/4-1.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Move the regular notebook next to the pink mug.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 and 5 - Centered -->
+        <div class="column is-12">
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/4-4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>C</sub>(our)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/4-5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/5-1.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Place the red ham in the stockpot.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-one-third">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 and 5 - Centered -->
+        <div class="column is-12">
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/5-4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>C</sub>(our)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="video-container">
+                <video controls autoplay muted loop preload="metadata" class="comparison-video">
+                  <source src="static/videos/5-5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Experimental Results -->
+
+
+<!-- Generalization to Open-world Scenarios -->
+<section class="section has-background-light">
+  <div class="container is-fullhd">
+    <h2 class="title is-3 has-text-centered">Generalization to Open-world Scenarios</h2>
+    <p class="subtitle has-text-centered mb-6">
+    </p>
+
+    <!-- Image 1 -->
+    <figure class="image">
+      <img src="static/images/table2.png" loading="lazy" class="table2-image">
+    </figure>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/1-2.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Pick up the purple cloth and wipe the green bowl.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/vidoe1_8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/video1_9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/2-2.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Move the orange carrot toy into the semi-transparent glass cup.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/2-9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/3-2.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Move the purple grape toy into the semi-transparent glass cup.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/3-9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/4-2.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Move the green patterned earbud case onto the silver laptop.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/4-9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <div class="video-comparison-section mt-6">
+      <div class="video-group-header">
+        <div class="group-labels">
+          <span class="observed-label">Observed Image:</span>
+        </div>
+        <img src="static/images/5-2.jpg" loading="lazy">
+        <div class="group-text">
+          <span class="task-label">Task Description:</span>
+          <p>“Pick up the small purple grape toy and put it in the light green bowl.”</p>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Video 1 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">CogVideoX</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">Wan2.1</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">FLOVD</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="column is-half">
+          <div class="video-container">
+            <video controls autoplay muted loop preload="metadata" class="comparison-video">
+              <source src="static/videos/5-9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-label has-text-centered mt-2">SCAR<sub>W</sub>(our)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Generalization to Open-world Scenarios -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. 
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
