@@ -82,6 +82,36 @@ body {
     margin: 8px 4px;
 }
 
+/* Purple Badge */
+.purple-badge-container {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.purple-badge {
+    background: #9333ea !important;
+    color: white !important;
+    border: none !important;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+    cursor: default !important;
+    pointer-events: none;
+    box-shadow: var(--shadow-md);
+    justify-content: center;
+    display: inline-flex;
+}
+
+.purple-badge:hover {
+    transform: none !important;
+    box-shadow: var(--shadow-md) !important;
+    background: #9333ea !important;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
