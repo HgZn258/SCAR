@@ -425,7 +425,7 @@
     <h2 class="title is-3 has-text-centered">Joint Generation of Video and Representation</h2>
     <!-- Image 2 -->
     <figure class="image">
-      <img src="static/images/pipeline.png" alt="Pipeline diagram of our JointHOI model" loading="lazy">
+      <img src="static/images/Pipeline.png" alt="Pipeline diagram of our JointHOI model" loading="lazy">
       <figcaption class="has-text-centered mt-2">
         The joint-generation paradigm of our method. Given an observed image and a task description, our framework jointly generates a video and its corresponding HOI representation. The core technical novelty lies in the Hierarchical Joint Denoiser that co-denoises visual and interaction tokens within a unified latent space. First, the Shared Semantics module enforces cross-modal consistency via an alignment loss (maximizing cosine similarity) to capture shared semantics like spatial layout and temporal dynamics. Then, the Specialized Details module adds a learnable interaction embedding to capture modality-specific details. Finally, the denoised predicted visual and interaction tokens are passed through the VAE decoder to reconstruct both outputs.
       </figcaption>
@@ -1112,3 +1112,4 @@
 
   </body>
   </html>
+
